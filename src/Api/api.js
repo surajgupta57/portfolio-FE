@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 // api url
-const baseUrl = "http://ec2-13-126-39-193.ap-south-1.compute.amazonaws.com:8000/api";
+const baseUrl = "http://127.0.0.1:8000/api";
 
 // Jumbo Section
 export const JumboDetails = createApi({
