@@ -78,7 +78,8 @@ const AboutMe = () => {
                   </div>
                   <div className="itscv">
                     <a
-                      href="https://drive.google.com/uc?id=1Mdc5CDgXVEZzjcc8JNkNSczkE0YJ0J8o"
+                      href="https://drive.google.com/uc?id=1iqgB1NN2--gmqtRNX1mJhNCXCoBx0JpQ"
+                      // href={details.resume}
                       download="RESUME.jpg"
                       target="_blank"
                       rel="noopener noreferrer"
