@@ -570,7 +570,7 @@ textarea:focus {
 }
 
 label {
-  color: #999;
+  color: #ccc;
   position: absolute;
   pointer-events: none;
   left: 10px;
@@ -582,7 +582,7 @@ input:focus ~ label {
   top: -10px;
   left: 15px;
   font-size: medium;
-  color: #fff;
+  color: red;
   padding: 0 5px 0 5px;
 }
 
@@ -593,8 +593,14 @@ input:valid:not(:focus) ~ label {
   font-size: medium;
   color: green;
 }
-input:invalid:empty ~ label {
-  color: red; /* Color when input is empty and invalid */
+input:invalid:empty:not(:focus) ~ label {
+  color: #ccc;
+  position: absolute;
+  pointer-events: none;
+  left: 10px;
+  top: 20px;
+  transition: 0.2s;
+  font-size: 15px;
 }
 /* input:focus ~ label, input:valid ~ label {
   top: -10px;
@@ -608,7 +614,7 @@ textarea:focus ~ label {
   top: -10px;
   left: 15px;
   font-size: medium;
-  color: #fff;
+  color: red;
   padding: 0 5px 0 5px;
 }
 
@@ -617,20 +623,16 @@ textarea:valid:not(:focus) ~ label {
   top: -10px;
   left: 15px;
   font-size: medium;
+  color: green;
 }
-
-/* .gradient-text {
-  background: linear-gradient(to bottom, white, black);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-} */
-/* textarea:invalid:empty ~ label {
-  color: red;
-} */
-textarea:invalid:empty ~ label ~ gradient-text {
-  background: linear-gradient(to bottom, rgb(16, 252, 134), rgb(255, 0, 0));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+textarea:invalid:empty:not(:focus) ~ label {
+  color: #ccc;
+  position: absolute;
+  pointer-events: none;
+  left: 10px;
+  top: 20px;
+  transition: 0.2s;
+  font-size: 15px;
 }
 /* textarea:focus ~ label, input:valid ~ label {
   top: -10px;
