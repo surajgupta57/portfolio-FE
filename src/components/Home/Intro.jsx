@@ -80,12 +80,12 @@ const Intro = () => {
                       className="contactMe"
                     >
                       <button className="contact-me">
-                        Hire me <i class="bx bx-send "></i>
+                        Hire me <i className="bx bx-send "></i>
                       </button>
                     </a>
                   </div>
                   <div
-                    class="intro-contact"
+                    className="intro-contact"
                     data-aos="fade-up"
                     data-aos-duration="1800"
                   >

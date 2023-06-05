@@ -71,7 +71,7 @@ const AboutMe = () => {
                     {icons &&
                       icons.map((details4) => (
                         <div className="lang-info" key={details4.id}>
-                          <i class={details4.code} ></i>
+                          <i className={details4.code} ></i>
                           <p className="pt-2">{details4.name}</p>
                         </div>
                       ))}
@@ -85,7 +85,7 @@ const AboutMe = () => {
                       rel="noopener noreferrer"
                     >
                       <button className="download-cv">
-                        Download Cv <i class="bx bx-download"></i>
+                        Download Cv <i className="bx bx-download"></i>
                       </button>
                     </a>
                   </div>

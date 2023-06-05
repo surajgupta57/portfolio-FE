@@ -87,7 +87,7 @@ const Projects = () => {
                       rel="noopener noreferrer"
                     >
                       <h6 className="learnmore">
-                        <i class="fa fa-laptop" aria-hidden="true"></i>&nbsp;
+                        <i className="fa fa-laptop" aria-hidden="true"></i>&nbsp;
                         Live Demo
                       </h6>
                     </a>
@@ -97,7 +97,7 @@ const Projects = () => {
                       rel="noopener noreferrer"
                     >
                       <h6 className="learnmore">
-                        <i class="fa fa-github" aria-hidden="true"></i> &nbsp;
+                        <i className="fa fa-github" aria-hidden="true"></i> &nbsp;
                         Source Code
                       </h6>
                     </a>

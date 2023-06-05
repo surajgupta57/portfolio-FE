@@ -17,17 +17,17 @@ const Footer = () => {
       <Main />
       <section>
         <div className="my-footer">
-          <div class="switch">
-            <div class="circle"></div>
+          <div className="switch">
+            <div className="circle"></div>
           </div>
-          <div class="progress-wrap">
+          <div className="progress-wrap">
             <svg
-              class="progress-circle svg-content"
+              className="progress-circle svg-content"
               width="100%"
               height="100%"
               viewBox="-1 -1 102 102"
             >
-              <i class="fa fa-angle-up" aria-hidden="true"></i>
+              <i className="fa fa-angle-up" aria-hidden="true"></i>
               <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
             </svg>
           </div>

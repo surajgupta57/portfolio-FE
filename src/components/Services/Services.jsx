@@ -35,8 +35,8 @@ const Services = () => {
                   <h4 className="web">{service.name}</h4>
                   <p className="service-info">{service.description}</p>
                   {/* <h6 className="learn-more">{service.learn_more}</h6> */}
-                  <div class="shadow-icon">
-                    <i class={service.shadow_icon}></i>
+                  <div className="shadow-icon">
+                    <i className={service.shadow_icon}></i>
                   </div>
                 </div>
               ))}
