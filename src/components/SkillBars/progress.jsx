@@ -30,7 +30,6 @@ const Progress = () => {
   const [progressDetail, setProgressDetails] = useState(progress);
   useEffect(() => {
     setProgressDetails(progress);
-    console.log(progressDetail);
   }, [progressDetail, progress]);
   if (isFetching) return "loading";
 

@@ -9,7 +9,6 @@ const Footer = () => {
   useEffect(() => {
     setSocialDetails(social);
 
-    // console.log(socialDetails);
   }, [socialDetails, social]);
   if (isFetching) return "loading";
 

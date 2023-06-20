@@ -21,7 +21,6 @@ const Intro = () => {
 
     document.title = doc;
 
-    // console.log(conta);
   }, [JumboDetails, homeData, contacts1Details, conta, doc]);
   if (isFetching) return "loading";
 

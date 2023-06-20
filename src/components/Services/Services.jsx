@@ -9,7 +9,6 @@ const Services = () => {
 
   useEffect(() => {
     setServicesDetails(services);
-    console.log(servicesDetails);
   }, [servicesDetails, services]);
   if (isFetching) return "loading";
 

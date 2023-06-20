@@ -5,6 +5,7 @@ import ContactMe from "./components/ContactMe/ContactMe";
 import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Intro";
 import Projects from "./components/MyWork/projects";
+import Testimonial from "./components/Testimonial/Testimonial";
 import Navbar from "./components/Navbar/Navbar";
 import Services from "./components/Services/Services";
 import Progress from "./components/SkillBars/progress";
@@ -52,6 +53,7 @@ useEffect(() => {
         <Services />
         <Progress />
         <Projects />
+        <Testimonial />
         <ContactMe />
         <Footer />
       </BrowserRouter>

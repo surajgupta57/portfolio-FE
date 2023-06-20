@@ -1,16 +1,40 @@
 import "./ContactMe.css";
 import { useGetContactsQuery } from "../../Api/api";
 import { useEffect, useState } from "react";
+import config from '../config.js';
 
 const ContactMe = () => {
   const { data: contacts, isFetching } = useGetContactsQuery();
-
+  // const baseUrl = process.env.BASEURL;
   const [contactsDetails, setContactDetails] = useState(contacts);
+  const [clientIP, setClientIP] = useState(contacts);
   // const img_300 = "";
   useEffect(() => {
     setContactDetails(contacts);
+    fetch('https://api.ipify.org?format=json')
+      .then((response) => response.json())
+      .then((data) => setClientIP(data.ip))
+      .catch((error) => console.error('Error:', error));
   }, [contactsDetails, contacts]);
   if (isFetching) return "loading";
+  const submitForm=(e)=>{
+    e.preventDefault()
+   
+    const formData = new FormData(e.target);
+    formData.append('client_ip', clientIP);
+    fetch(`${config.BASEURL}/reach-me/`, {
+      method: 'POST',
+      body: formData,
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        e.target.reset();
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+
+  }
   return (
     <>
       <section id="contact">
@@ -27,7 +51,7 @@ const ContactMe = () => {
               </div>
             </div>
             <div className="col-lg-6 col-md-6">
-            <form action="">
+            <form onSubmit={submitForm}>
             <div className="row">
               <div className="col-lg-7 col-md-6">
                 <div className="form-group text-field">

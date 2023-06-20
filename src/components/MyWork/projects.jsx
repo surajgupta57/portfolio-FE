@@ -49,7 +49,6 @@ const Projects = () => {
   const [projectsDetails, setProjectsDetails] = useState(projects);
   useEffect(() => {
     setProjectsDetails(projects);
-    console.log(projectsDetails);
   }, [projectsDetails, projects]);
   if (isFetching) return "loading";
 

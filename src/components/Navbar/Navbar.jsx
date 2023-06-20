@@ -44,13 +44,17 @@ const Navbar = () => {
                   </li>
 
                   <li data-aos="fade-down" data-aos-duration="1800">
+                    <a href="#recommendation">Recommendation</a>
+                  </li>
+
+                  <li data-aos="fade-down" data-aos-duration="1800">
                     <a href="#contact">Contact</a>
                   </li>
                 </ul>
               </nav>
-              <div className="nav-social">
+              {/* <div className="nav-social">
                 <i className="fa fa-github"></i>
-              </div>
+              </div> */}
               <div className="left-btns">
                 <div className=" " id="theme-button2">
                   <input id="toggle" className="toggle" type="checkbox"></input>

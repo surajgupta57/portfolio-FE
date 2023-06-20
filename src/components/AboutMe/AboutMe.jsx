@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 import decor1 from "../../images/decoration/dots-1.png";
 import reactagle from "../../images/decoration/Rectangle-7.png";
 import shady from "../../images/decoration/dots.png";
-
+import config from '../config.js';
 const AboutMe = () => {
   const { data: aboutData, isFetching } = useGetAboutMeQuery();
   const { data: langIcons } = useGetLanguagesIconsQuery();
@@ -18,16 +18,12 @@ const AboutMe = () => {
 
   const { data: conta2 } = useGetJumboDetailsQuery();
   const [contacts1Details, setContact2Details] = useState(conta2);
-  const cv = contacts1Details && contacts1Details.map((data1) => data1.cv_link);
-  console.log(cv);
-  console.log(conta2);
 
   useEffect(() => {
     setAboutMe(aboutData);
     setContact2Details(conta2);
 
     setIcons(langIcons);
-    console.log(langIcons);
   }, [aboutMe, aboutData, langIcons, icons, contacts1Details, conta2]);
 
   return (
@@ -77,17 +73,16 @@ const AboutMe = () => {
                       ))}
                   </div>
                   <div className="itscv">
-                    <a
-                      href="https://drive.google.com/uc?id=1iqgB1NN2--gmqtRNX1mJhNCXCoBx0JpQ"
-                      // href={details.resume}
-                      download="RESUME.jpg"
+                    <input
+                      href={`${config.BASEURL.split("/api")[0]}${details.cv}`}
+                      download="RESUME.pdf"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       <button className="download-cv">
                         Download Cv <i className="bx bx-download"></i>
                       </button>
-                    </a>
+                    </input>
                   </div>
                 </div>
               </div>

@@ -8,6 +8,7 @@ import {
   Contacts,
   SocialMedia,
   LanguagesIcons,
+  Testimonials,
 } from "../Api/api";
 
 export default configureStore({
@@ -20,5 +21,6 @@ export default configureStore({
     [Contacts.reducerPath]: Contacts.reducer,
     [SocialMedia.reducerPath]: SocialMedia.reducer,
     [LanguagesIcons.reducerPath]: LanguagesIcons.reducer,
+    [Testimonials.reducerPath]: Testimonials.reducer,
   },
 });

@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 // api url
-const baseUrl = "http://192.168.29.194:8001/api";
+const baseUrl = "http://127.0.0.1:8000/api";
 
 // Jumbo Section
 export const JumboDetails = createApi({
@@ -90,6 +90,16 @@ export const LanguagesIcons = createApi({
     }),
   }),
 });
+// Testimonials
+export const Testimonials = createApi({
+  reducerPath: "Testimonials",
+  baseQuery: fetchBaseQuery({ baseUrl }),
+  endpoints: (builder) => ({
+    getTestimonials: builder.query({
+      query: () => "/testimonials-list",
+    }),
+  }),
+});
 
 export const { useGetJumboDetailsQuery } = JumboDetails;
 export const { useGetAboutMeQuery } = AboutMe;
@@ -99,3 +109,4 @@ export const { useGetProjectsQuery } = Projects;
 export const { useGetContactsQuery } = Contacts;
 export const { useGetSocialMediaQuery } = SocialMedia;
 export const { useGetLanguagesIconsQuery } = LanguagesIcons;
+export const { useGetTestimonialsQuery } = Testimonials;
