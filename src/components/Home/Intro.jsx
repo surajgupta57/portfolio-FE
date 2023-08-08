@@ -4,7 +4,7 @@ import decor3 from "../../images/decoration/Group-31.png";
 import "./Intro.css";
 import { useGetJumboDetailsQuery } from "../../Api/api";
 import { useGetSocialMediaQuery } from "../../Api/api";
-import config from '../config.js';
+
 
 const Intro = () => {
   const { data: conta } = useGetSocialMediaQuery();
@@ -12,7 +12,7 @@ const Intro = () => {
   const { data: homeData, isFetching } = useGetJumboDetailsQuery();
   const [JumboDetails, setJumboDetails] = useState(homeData);
   const [contacts1Details, setContact2Details] = useState(conta);
-  const img_300 = "https://drive.google.com/uc?id=";
+  import config from '../config.js';
   // const img_300 = "https://dwrqao8j794zb.cloudfront.net/for-static-use/";
   const doc = JumboDetails && JumboDetails.map((detail2) => detail2.name);
 

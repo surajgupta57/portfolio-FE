@@ -8,14 +8,14 @@ import { useEffect, useState } from "react";
 import decor1 from "../../images/decoration/dots-1.png";
 import reactagle from "../../images/decoration/Rectangle-7.png";
 import shady from "../../images/decoration/dots.png";
-import config from '../config.js';
+
 const AboutMe = () => {
   const { data: aboutData, isFetching } = useGetAboutMeQuery();
   const { data: langIcons } = useGetLanguagesIconsQuery();
   const [aboutMe, setAboutMe] = useState(aboutData);
   const [icons, setIcons] = useState(langIcons);
   const img_300 = "https://drive.google.com/uc?id=";
-
+  import config from '../config.js';
   const { data: conta2 } = useGetJumboDetailsQuery();
   const [contacts1Details, setContact2Details] = useState(conta2);
 
