@@ -6,7 +6,7 @@ import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import { Link } from "react-router-dom";
-
+import config from '../config.js';
 const Projects = () => {
   const { data: projects, isFetching } = useGetProjectsQuery();
   const img_300 = "https://drive.google.com/uc?id=";
@@ -65,7 +65,7 @@ const Projects = () => {
               <div className="project" data-aos="fade-up" key={details.id}>
                 <div className="project-img">
                   <img
-                    src={`${img_300}${details.logo}`}
+                    src={`${config.BASEURL.split("/api")[0]}${details.logo}`}
                     alt=""
                     className="work-img"
                   />
