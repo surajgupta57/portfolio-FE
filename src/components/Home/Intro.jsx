@@ -4,6 +4,7 @@ import decor3 from "../../images/decoration/Group-31.png";
 import "./Intro.css";
 import { useGetJumboDetailsQuery } from "../../Api/api";
 import { useGetSocialMediaQuery } from "../../Api/api";
+import config from '../config.js';
 
 const Intro = () => {
   const { data: conta } = useGetSocialMediaQuery();
@@ -119,7 +120,7 @@ const Intro = () => {
                     /> */}
                     <img
                       className="intro-img"
-                      src={`${img_300}${detail.jumbo_img}`}
+                      src={`${config.BASEURL.split("/api")[0]}${detail.jumbo_img}`}
                       alt=""
                     />
                   </div>
