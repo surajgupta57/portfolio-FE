@@ -24,7 +24,7 @@ const ContactMe = () => {
    
     const formData = new FormData(e.target);
     formData.append('client_ip', clientIP);
-    fetch(`${config.BASEURL}/reach-me/`, {
+    fetch(`${BASEURL}/api/reach-me/`, {
       method: 'POST',
       body: formData,
     })
