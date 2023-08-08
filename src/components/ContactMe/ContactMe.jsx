@@ -1,7 +1,8 @@
 import "./ContactMe.css";
 import { useGetContactsQuery } from "../../Api/api";
 import { useEffect, useState } from "react";
-import config from '../config.js';
+// import config from '../config.js';
+
 
 const ContactMe = () => {
   const { data: contacts, isFetching } = useGetContactsQuery();
@@ -9,6 +10,7 @@ const ContactMe = () => {
   const [contactsDetails, setContactDetails] = useState(contacts);
   const [clientIP, setClientIP] = useState(contacts);
   // const img_300 = "";
+  const BASEURL = "http://api.inavihs.tech"
   useEffect(() => {
     setContactDetails(contacts);
     fetch('https://api.ipify.org?format=json')

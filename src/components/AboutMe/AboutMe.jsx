@@ -15,7 +15,8 @@ const AboutMe = () => {
   const [aboutMe, setAboutMe] = useState(aboutData);
   const [icons, setIcons] = useState(langIcons);
   const img_300 = "https://drive.google.com/uc?id=";
-  import config from '../config.js';
+  // import config from '../config.js';
+  const BASEURL = "http://api.inavihs.tech"
   const { data: conta2 } = useGetJumboDetailsQuery();
   const [contacts1Details, setContact2Details] = useState(conta2);
 
@@ -48,7 +49,7 @@ const AboutMe = () => {
                   className=" col-lg-6 col-md-5 col-sm-12 about-img"
                   data-aos="fade-up-right"
                 >
-                  <img src={`${config.BASEURL.split("/api")[0]}${details.logo}`} alt="" />
+                  <img src={`${BASEURL}${details.logo}`} alt="" />
                 </div>
                 <div
                   className=" col-lg-6 col-md-7  col-sm-12 about_myinfo"
@@ -74,7 +75,7 @@ const AboutMe = () => {
                   </div>
                   <div className="itscv">
                     <input
-                      href={`${config.BASEURL.split("/api")[0]}${details.cv}`}
+                      href={`${BASEURL}${details.cv}`}
                       download="RESUME.pdf"
                       target="_blank"
                       rel="noopener noreferrer"

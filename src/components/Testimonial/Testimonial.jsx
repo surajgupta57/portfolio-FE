@@ -3,13 +3,13 @@
 import "./Testimonial.css";
 import { useGetTestimonialsQuery } from "../../Api/api";
 import { useEffect, useState, useRef} from "react";
-import config from '../config.js';
+// import config from '../config.js';
 import { Carousel } from 'react-bootstrap';
 const Testimonial = () => {
   const { data: testimonials, isFetching } = useGetTestimonialsQuery();
   const [chunks, setChunks] = useState([]);
   const itemRef = useRef(null);
-
+  const BASEURL = "http://api.inavihs.tech"
   useEffect(() => {
     if (testimonials) {
       const testimonialChunks = testimonials.reduce((acc, curr, index) => {
@@ -60,7 +60,7 @@ const Testimonial = () => {
                 <div className="col-lg-4 col-md-4 col-sm-4" key={testimonial.id} ref={itemRef}>
                   <div className="feedback-slider-item">
                     <img
-                      src={`${config.BASEURL.split("/api")[0]}${testimonial.photo}`}
+                      src={`${BASEURL}${testimonial.photo}`}
                       className="img-circle"
                       alt="Customer Feedback"
                     />

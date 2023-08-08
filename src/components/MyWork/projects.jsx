@@ -6,11 +6,11 @@ import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import { Link } from "react-router-dom";
-import config from '../config.js';
+// import config from '../config.js';
 const Projects = () => {
   const { data: projects, isFetching } = useGetProjectsQuery();
   const img_300 = "https://drive.google.com/uc?id=";
-
+  const BASEURL = "http://api.inavihs.tech"
   const options = {
     margin: 30,
     responsiveClass: true,
@@ -65,7 +65,7 @@ const Projects = () => {
               <div className="project" data-aos="fade-up" key={details.id}>
                 <div className="project-img">
                   <img
-                    src={`${config.BASEURL.split("/api")[0]}${details.logo}`}
+                    src={`${BASEURL}${details.logo}`}
                     alt=""
                     className="work-img"
                   />

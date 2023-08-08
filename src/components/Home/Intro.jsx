@@ -12,7 +12,8 @@ const Intro = () => {
   const { data: homeData, isFetching } = useGetJumboDetailsQuery();
   const [JumboDetails, setJumboDetails] = useState(homeData);
   const [contacts1Details, setContact2Details] = useState(conta);
-  import config from '../config.js';
+  // import config from '../config.js';
+  const BASEURL = "http://api.inavihs.tech"
   // const img_300 = "https://dwrqao8j794zb.cloudfront.net/for-static-use/";
   const doc = JumboDetails && JumboDetails.map((detail2) => detail2.name);
 
@@ -120,7 +121,7 @@ const Intro = () => {
                     /> */}
                     <img
                       className="intro-img"
-                      src={`${config.BASEURL.split("/api")[0]}${detail.jumbo_img}`}
+                      src={`${BASEURL}${detail.jumbo_img}`}
                       alt=""
                     />
                   </div>
