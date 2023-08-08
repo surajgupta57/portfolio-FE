@@ -1,5 +1,5 @@
 const config = {
-  BASEURL: 'http://127.0.0.1:8000/api'
+  BASEURL: 'http://api.inavihs.tech/api'
 };
 
 export default config;
