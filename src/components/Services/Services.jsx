@@ -1,7 +1,7 @@
 import "./Services.css";
 import { useGetServicesQuery } from "../../Api/api";
 import { useEffect, useState } from "react";
-
+import config from '../config.js';
 const Services = () => {
   const { data: services, isFetching } = useGetServicesQuery();
   const [servicesDetails, setServicesDetails] = useState(services);
@@ -30,7 +30,7 @@ const Services = () => {
                   data-aos="zoom-in-up"
                   data-aos-duration="1500"
                 >
-                  <img src={`${img_300}${service.icon}`} alt="" />
+                  <img src={`${config.BASEURL.split("/api")[0]}${service.icon}`} alt="" />
                   <h4 className="web">{service.name}</h4>
                   <p className="service-info">{service.description}</p>
                   {/* <h6 className="learn-more">{service.learn_more}</h6> */}
